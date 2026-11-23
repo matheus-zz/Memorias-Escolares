@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Rodrigues — Memórias Escolares</title>
+<meta name="description" content="Portfólio de memórias escolares e redações de Matheus Rodrigues.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var t=localStorage.getItem('ftv-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();
+</script>
+</head>
+<body>
+
+<!-- Barra de Progresso de Leitura -->
+<div id="progress-bar" class="progress-bar"></div>
+
+<!-- Efeitos de Fundo (Auroras) -->
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<!-- Cursor Customizado -->
+<div id="custom-cursor" class="custom-cursor"></div>
+
+<header class="header">
+  <a href="#inicio" class="logo">Matheus<span>.</span>Rodrigues</a>
+  <nav class="nav">
+    <a href="#inicio">Início</a>
+    <a href="#memorias">Memórias</a>
+    <a href="#redacoes">Redações</a>
+    <button id="tema" aria-label="Mudar tema">◐</button>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-inner">
+      <span class="etiqueta reveal">MEMÓRIAS ESCOLARES · PORTFÓLIO</span>
+      <h1 class="reveal">MATHEUS <br> <em>RODRIGUES</em></h1>
+      <p class="reveal">Da primeira página ao último sinal: trajetória escolar e produções textuais reunidas neste portfólio.</p>
+      <div class="hero-actions reveal">
+        <a href="#memorias" class="botao primario magnetic">Ver memórias</a>
+        <a href="#redacoes" class="botao secundario magnetic">Ler redações</a>
+      </div>
+    </div>
+    <div class="scroll-indicator reveal">
+      <div class="mouse"></div>
+    </div>
+  </section>
+
+  <!-- MEMÓRIAS (Estilo Bento Grid) -->
+  <section id="memorias" class="secao">
+    <div class="secao-cab reveal">
+      <span class="etiqueta">01 / LINHA DO TEMPO</span>
+      <h2>Minha trajetória</h2>
+      <p>Momentos que construíram quem eu sou.</p>
+    </div>
+
+    <div class="memorias" id="memorias-grid"></div>
+  </section>
+
+  <!-- REDAÇÕES -->
+  <section id="redacoes" class="secao">
+    <div class="secao-cab reveal">
+      <span class="etiqueta">02 / PORTFÓLIO TEXTUAL</span>
+      <h2>Minhas redações</h2>
+      <p>17 produções que marcaram minha evolução na escrita.</p>
+    </div>
+
+    <div class="busca-wrapper reveal">
+      <input type="text" id="busca" class="busca" placeholder="Buscar por tema (ex: tecnologia, meio ambiente)...">
+    </div>
+
+    <div class="redacoes" id="redacoes-grid"></div>
+  </section>
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <button id="fechar" class="fechar" aria-label="Fechar">×</button>
+    <div class="modal-header-content">
+      <span id="modal-num" class="modal-num">01</span>
+      <div class="audio-container">
+        <button id="btn-audio" class="btn-audio" title="Ouvir redação">
+          <span class="icone-audio">🔊</span> <span class="txt-audio">Ouvir Texto</span>
+        </button>
+        <div class="audio-visualizer" id="audio-viz">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <h3 id="modal-titulo"></h3>
+    <p id="modal-tema"></p>
+    <div id="modal-texto" class="modal-texto"></div>
+  </div>
+</div>
+
+<!-- Botão Voltar ao Topo -->
+<button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">↑</button>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>"O fim do Ensino Médio não é um ponto final — é uma vírgula gigante na minha história."</p>
+    <div class="footer-info">
+      <span>Matheus Rodrigues</span>
+      <span>Colégio Estadual Padre Claudio Morelli</span>
+      <span>2014–2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
